@@ -449,7 +449,7 @@ button {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
-  color: var(--color-white);
+  color: var(--color-primary);
   line-height: 1.1;
   letter-spacing: 6px;
   background: linear-gradient(135deg, var(--color-white) 0%, var(--color-primary) 100%);
