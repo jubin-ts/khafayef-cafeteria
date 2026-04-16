@@ -210,6 +210,82 @@ const menuData = [
   { id: 'd10', name: 'Fruit Salad', desc: 'Fresh seasonal fruit salad', price: 15.00, category: 'desserts', icon: 'fas fa-apple-whole', color: '#27ae60' },
   { id: 'd11', name: 'Mango Bricks', desc: 'Mango flavored dessert bricks', price: 12.00, category: 'desserts', icon: 'fas fa-cookie-bite', color: '#f39c12' },
   { id: 'd12', name: 'Sahlab', desc: 'Warm creamy sahlab drink', price: 10.00, category: 'desserts', icon: 'fas fa-mug-hot', color: '#f5f5dc' },
+
+  // PORATTA
+  { id: 'p1', name: 'Mathafi Poratta', desc: 'Special Mathafi style poratta', price: 12.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e67e22' },
+  { id: 'p2', name: 'London Poratta', desc: 'London style poratta', price: 13.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e67e22' },
+  { id: 'p3', name: 'Dynamite Chicken Poratta', desc: 'Spicy dynamite chicken poratta', price: 14.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e74c3c' },
+  { id: 'p4', name: 'Shawarma Poratta', desc: 'Shawarma filled poratta', price: 6.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e67e22' },
+  { id: 'p5', name: 'Tikka Poratta', desc: 'Chicken tikka poratta', price: 6.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e74c3c' },
+  { id: 'p6', name: 'Fillet Poratta', desc: 'Chicken fillet poratta', price: 6.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e67e22' },
+  { id: 'p7', name: 'Shrimps Poratta', desc: 'Shrimps filled poratta', price: 11.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e74c3c' },
+  { id: 'p8', name: 'Francisco Poratta', desc: 'Special Francisco style poratta', price: 6.50, category: 'wraps', icon: 'fas fa-bread-slice', color: '#f39c12' },
+  { id: 'p9', name: 'Egg/Omelette Poratta', desc: 'Egg or omelette poratta', price: 3.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#f39c12' },
+  { id: 'p10', name: 'Nutella Poratta', desc: 'Sweet Nutella poratta', price: 5.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#8e44ad' },
+  { id: 'p11', name: 'Cheetos Poratta', desc: 'Crunchy cheetos poratta', price: 9.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#f39c12' },
+
+  // INDOMIE
+  { id: 'in1', name: 'Chicken Indomie', desc: 'Indomie noodles with chicken', price: 10.00, category: 'chinese', icon: 'fas fa-bowl-food', color: '#e67e22' },
+  { id: 'in2', name: 'Prawns Indomie', desc: 'Indomie noodles with prawns', price: 12.00, category: 'chinese', icon: 'fas fa-bowl-food', color: '#e74c3c' },
+  { id: 'in3', name: 'Mix Indomie', desc: 'Mixed indomie noodles', price: 12.00, category: 'chinese', icon: 'fas fa-bowl-food', color: '#f39c12' },
+  { id: 'in4', name: 'Cheetos Indomie', desc: 'Indomie with crunchy cheetos', price: 12.00, category: 'chinese', icon: 'fas fa-bowl-food', color: '#e67e22' },
+  { id: 'in5', name: 'Zinker Indomie', desc: 'Indomie with crispy zinker', price: 12.00, category: 'chinese', icon: 'fas fa-bowl-food', color: '#e74c3c' },
+  { id: 'in6', name: 'Egg Indomie', desc: 'Indomie with egg', price: 8.00, category: 'chinese', icon: 'fas fa-bowl-food', color: '#f39c12' },
+  { id: 'in7', name: 'Cheese Indomie', desc: 'Cheesy indomie noodles', price: 10.00, category: 'chinese', icon: 'fas fa-bowl-food', color: '#f39c12' },
+
+  // CLUB SANDWICHES
+  { id: 'cl1', name: 'Chicken/Beef Club', desc: 'Classic chicken or beef club sandwich', price: 15.00, category: 'shawarma', icon: 'fas fa-bread-slice', color: '#e67e22' },
+  { id: 'cl2', name: 'Zinker Club', desc: 'Crispy zinker club sandwich', price: 16.00, category: 'shawarma', icon: 'fas fa-bread-slice', color: '#e74c3c' },
+  { id: 'cl3', name: 'Italian Club', desc: 'Italian style club sandwich', price: 16.00, category: 'shawarma', icon: 'fas fa-bread-slice', color: '#27ae60' },
+  { id: 'cl4', name: 'Spanish Club', desc: 'Spanish style club sandwich', price: 16.00, category: 'shawarma', icon: 'fas fa-bread-slice', color: '#e74c3c' },
+  { id: 'cl5', name: 'Vegetable Club', desc: 'Fresh vegetable club sandwich', price: 14.00, category: 'shawarma', icon: 'fas fa-bread-slice', color: '#27ae60' },
+  { id: 'cl6', name: 'Rolex Club', desc: 'Special Rolex club sandwich', price: 15.00, category: 'shawarma', icon: 'fas fa-bread-slice', color: '#f39c12' },
+
+  // PASTA
+  { id: 'pa1', name: 'Red Sauce Pasta', desc: 'Classic pasta in red tomato sauce', price: 19.00, category: 'indian', icon: 'fas fa-bowl-food', color: '#e74c3c' },
+  { id: 'pa2', name: 'White Pasta', desc: 'Creamy white sauce pasta', price: 19.00, category: 'indian', icon: 'fas fa-bowl-food', color: '#f5f5dc' },
+  { id: 'pa3', name: 'Mix Pasta', desc: 'Mixed sauce pasta', price: 20.00, category: 'indian', icon: 'fas fa-bowl-food', color: '#e67e22' },
+  { id: 'pa4', name: 'Shrimps Pasta', desc: 'Pasta with prawns', price: 22.00, category: 'indian', icon: 'fas fa-bowl-food', color: '#e74c3c' },
+  { id: 'pa5', name: 'Seafood Pasta', desc: 'Pasta with mixed seafood', price: 24.00, category: 'indian', icon: 'fas fa-bowl-food', color: '#3498db' },
+
+  // COMBOS
+  { id: 'co1', name: 'Tandoori Combo', desc: 'Tandoori chicken combo meal', price: 11.00, category: 'broasted', icon: 'fas fa-box', color: '#e74c3c' },
+  { id: 'co2', name: 'Cajun Combo', desc: 'Cajun spiced combo meal', price: 11.00, category: 'broasted', icon: 'fas fa-box', color: '#f39c12' },
+  { id: 'co3', name: 'Shish Tawook Combo', desc: 'Shish tawook combo meal', price: 11.00, category: 'broasted', icon: 'fas fa-box', color: '#e67e22' },
+  { id: 'co4', name: 'Kabab Combo', desc: 'Kabab combo meal', price: 11.00, category: 'broasted', icon: 'fas fa-box', color: '#e74c3c' },
+  { id: 'co5', name: 'Grilled Combo', desc: 'Grilled chicken combo meal', price: 11.00, category: 'broasted', icon: 'fas fa-box', color: '#e67e22' },
+  { id: 'co6', name: 'Thighs Combo', desc: 'Chicken thighs combo meal', price: 11.00, category: 'broasted', icon: 'fas fa-box', color: '#e74c3c' },
+  { id: 'co7', name: 'Chi. Nuggets Combo', desc: 'Chicken nuggets combo meal', price: 11.00, category: 'broasted', icon: 'fas fa-box', color: '#f39c12' },
+  { id: 'co8', name: 'Dynamite Zinker Combo', desc: 'Spicy dynamite zinker combo', price: 16.00, category: 'broasted', icon: 'fas fa-box', color: '#e74c3c' },
+  { id: 'co9', name: 'Crunchy Beef Combo', desc: 'Crunchy beef combo meal', price: 16.00, category: 'broasted', icon: 'fas fa-box', color: '#c0392b' },
+
+  // DIET CORNER
+  { id: 'dt1', name: 'Kuku Nasar', desc: 'Healthy grilled kuku nasar', price: 20.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#27ae60' },
+  { id: 'dt2', name: 'Kuku Arabic', desc: 'Arabic style kuku', price: 18.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#27ae60' },
+  { id: 'dt3', name: 'Tandoori Arabic', desc: 'Diet tandoori Arabic style', price: 19.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#e74c3c' },
+  { id: 'dt4', name: 'Zinker Arabic', desc: 'Diet zinker Arabic style', price: 16.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#e67e22' },
+  { id: 'dt5', name: 'Shish Tawook Arabic', desc: 'Diet shish tawook Arabic', price: 16.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#f39c12' },
+  { id: 'dt6', name: 'Chicken Breast', desc: 'Grilled chicken breast (diet)', price: 10.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#27ae60' },
+  { id: 'dt7', name: 'Breakfast Diet Meal', desc: 'Healthy breakfast diet meal', price: 18.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#27ae60' },
+  { id: 'dt8', name: 'Avocado Egg Toast', desc: 'Avocado on toast with egg', price: 10.00, category: 'starters', icon: 'fas fa-heart-pulse', color: '#27ae60' },
+
+  // ZAKIS SPECIAL
+  { id: 'z1', name: 'Zakis Burger', desc: 'Special crispy Zakis burger', price: 16.00, category: 'burgers', icon: 'fas fa-burger', color: '#ff6b35' },
+  { id: 'z2', name: 'Zakis Kuku', desc: 'Zakis style kuku', price: 22.00, category: 'burgers', icon: 'fas fa-burger', color: '#ff6b35' },
+  { id: 'z3', name: 'Zakis Finger', desc: 'Crispy Zakis chicken fingers', price: 18.00, category: 'burgers', icon: 'fas fa-burger', color: '#ff6b35' },
+  { id: 'z4', name: 'Zakis Loaded Chicken', desc: 'Loaded chicken Zakis style', price: 15.00, category: 'burgers', icon: 'fas fa-burger', color: '#ff6b35' },
+  { id: 'z5', name: 'Zakis Combo', desc: 'Full Zakis combo meal', price: 21.00, category: 'burgers', icon: 'fas fa-burger', color: '#ff6b35' },
+  { id: 'z6', name: 'Popcorn Cheese', desc: 'Cheesy chicken popcorn bites', price: 16.00, category: 'burgers', icon: 'fas fa-burger', color: '#f39c12' },
+
+  // SPANISH/ITALIAN SPECIAL
+  { id: 'sp5', name: 'Spanish Twister', desc: 'Spicy Spanish twister wrap', price: 15.00, category: 'wraps', icon: 'fas fa-bread-slice', color: '#e74c3c' },
+  { id: 'sp6', name: 'Spicy Italian Double Zinker', desc: 'Double zinker Italian spicy', price: 20.00, category: 'burgers', icon: 'fas fa-burger', color: '#27ae60' },
+  { id: 'sp7', name: 'Spicy Spanish Double Zinker', desc: 'Double zinker Spanish spicy', price: 20.00, category: 'burgers', icon: 'fas fa-burger', color: '#e74c3c' },
+
+  // FRESH BURGERS
+  { id: 'fb1', name: 'Fresh Ruman Burger', desc: 'Premium fresh Ruman burger', price: 23.00, category: 'burgers', icon: 'fas fa-burger', color: '#27ae60' },
+  { id: 'fb2', name: 'Fresh Burger Mushroom', desc: 'Fresh burger with mushroom', price: 23.00, category: 'burgers', icon: 'fas fa-burger', color: '#8e44ad' },
+  { id: 'fb3', name: 'Jumbo Prawns Burger', desc: 'Large prawns burger', price: 20.00, category: 'burgers', icon: 'fas fa-burger', color: '#e74c3c' },
 ];
 
 // ===== APP STATE =====
