@@ -311,7 +311,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== PRELOADER =====
 function initPreloader() {
+  // Ensure page starts at top on first load
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+  window.scrollTo(0, 0);
+
   window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       document.getElementById('preloader').classList.add('loaded');
     }, 800);
