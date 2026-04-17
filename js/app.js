@@ -311,9 +311,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== PRELOADER =====
 function initPreloader() {
-  // Ensure page starts at top on first load
-  if (window.location.hash) {
-    history.replaceState(null, '', window.location.pathname + window.location.search);
+  // Ensure page starts at hero section on initial load
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
   }
   window.scrollTo(0, 0);
 
