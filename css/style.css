@@ -67,6 +67,7 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -807,7 +808,7 @@ button {
 
 .specials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: 30px;
 }
 
@@ -1029,7 +1030,7 @@ button {
 /* Menu Grid */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -1080,6 +1081,7 @@ button {
 .menu-item-info {
   flex: 1;
   min-width: 0;
+  overflow: hidden;
 }
 
 .menu-item-name {
@@ -1104,6 +1106,7 @@ button {
   flex-direction: column;
   align-items: flex-end;
   gap: 6px;
+  flex-shrink: 0;
 }
 
 .menu-item-price {
@@ -1982,12 +1985,23 @@ button {
   }
 
   .menu-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
     gap: 6px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+
+  .menu-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .menu-tab {
     padding: 8px 14px;
     font-size: 0.8rem;
+    flex-shrink: 0;
   }
 
   .gallery-grid {
@@ -2062,7 +2076,7 @@ button {
     align-items: center;
   }
 
-  .btn {
+  .hero-actions .btn {
     width: 100%;
     justify-content: center;
   }
@@ -2078,6 +2092,53 @@ button {
 
   .menu-item {
     padding: 12px;
+    gap: 10px;
+  }
+
+  .menu-item-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 1.1rem;
+  }
+
+  .menu-item-name {
+    font-size: 0.85rem;
+  }
+
+  .menu-item-desc {
+    font-size: 0.75rem;
+  }
+
+  .menu-item-price {
+    font-size: 0.85rem;
+  }
+
+  .menu-add-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+
+  .special-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .special-info {
+    padding: 14px;
+  }
+
+  .special-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .special-info p {
+    font-size: 0.82rem;
+  }
+
+  .special-price {
+    font-size: 1.1rem;
   }
 
   .gallery-grid {
@@ -2086,6 +2147,10 @@ button {
 
   .gallery-item-lg {
     grid-column: span 1;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }
 
@@ -2129,7 +2194,7 @@ button {
 
 .order-platforms {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
