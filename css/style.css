@@ -1984,6 +1984,13 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .menu-item-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 1.2rem;
+  }
+
   .menu-tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -2091,23 +2098,38 @@ button {
   }
 
   .menu-item {
-    padding: 12px;
+    padding: 10px 12px;
     gap: 10px;
   }
 
   .menu-item-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    font-size: 1.1rem;
+    display: none;
+  }
+
+  .menu-item-info {
+    flex: 1;
+    min-width: 0;
   }
 
   .menu-item-name {
     font-size: 0.85rem;
+    white-space: normal;
+    line-height: 1.3;
   }
 
   .menu-item-desc {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .menu-item-action {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
   }
 
   .menu-item-price {
@@ -2115,9 +2137,9 @@ button {
   }
 
   .menu-add-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 0.7rem;
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
   }
 
   .special-footer {
