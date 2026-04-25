@@ -2121,3 +2121,357 @@ button {
     padding: 20px 0;
   }
 }
+
+/* ========== ORDER ONLINE SECTION ========== */
+.order-section {
+  background: var(--color-bg);
+}
+
+.order-platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.order-platform-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.order-platform-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.platform-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.order-platform-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.order-platform-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* ========== FAQ SECTION ========== */
+.faq-section {
+  background: var(--color-white);
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.faq-item summary {
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-item p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+.faq-item a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* ========== BLOG PAGE ========== */
+.header-solid {
+  background: var(--color-dark) !important;
+  position: relative;
+}
+
+.blog-hero {
+  background: linear-gradient(135deg, var(--color-dark) 0%, #16213e 100%);
+  padding: 8rem 0 4rem;
+  text-align: center;
+  color: #fff;
+}
+
+.blog-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.blog-hero p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.blog-main {
+  padding: 4rem 0;
+  background: var(--color-bg, #f8f9fa);
+}
+
+.blog-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.blog-card-img {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.blog-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-primary, #f7931e);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.blog-card-body {
+  padding: 2rem;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.blog-meta i {
+  margin-right: 0.3rem;
+}
+
+.blog-card-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark, #1a1a2e);
+  line-height: 1.3;
+}
+
+.blog-card-body h3 {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--color-dark, #1a1a2e);
+}
+
+.blog-card-body p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card-body ol,
+.blog-card-body ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card-body li {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-body a {
+  color: var(--color-primary, #f7931e);
+}
+
+.blog-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.blog-inline-img {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.blog-inline-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.blog-inline-img figcaption {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  padding: 0.75rem 0 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .blog-card-img { height: 200px; }
+  .blog-card-body { padding: 1.5rem; }
+  .blog-card-body h2 { font-size: 1.25rem; }
+}
+
+/* ========== ARABIC ABOUT SECTION ========== */
+.arabic-about-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 4rem 0;
+}
+
+.arabic-about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.arabic-title {
+  font-family: 'Amiri', serif;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.arabic-text {
+  font-family: 'Amiri', serif;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.15rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.arabic-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .arabic-title { font-size: 1.5rem; }
+  .arabic-text { font-size: 1rem; }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Touch optimizations for mobile */
+a, button, .menu-tab, .btn, .nav-link, .special-card, .order-platform-card, .faq-item summary {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Content visibility for below-fold sections (auto-render on scroll) */
+.specials-section,
+.menu-section,
+.gallery-section,
+.testimonials-section,
+.order-section,
+.faq-section,
+.contact-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* GPU acceleration for animated elements */
+.hero-content,
+.special-card,
+.gallery-item,
+.float-btn,
+.back-to-top {
+  will-change: transform;
+}
+
+/* Optimize font rendering */
+h1, h2, h3, h4, .hero-title-brand, .logo-text {
+  text-rendering: optimizeLegibility;
+}

@@ -293,6 +293,7 @@ let cart = [];
 let currentCategory = 'all';
 let displayCount = 24;
 const ITEMS_PER_LOAD = 12;
+const VALID_CATEGORIES = ['grills', 'mandi', 'broasted', 'shawarma', 'chinese', 'indian', 'burgers', 'wraps', 'starters', 'beverages', 'desserts'];
 
 // ===== DOM READY =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -307,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initScrollEffects();
   initAOS();
+  initHashCategoryFilter();
 });
 
 // ===== PRELOADER =====
@@ -803,4 +805,31 @@ function escapeHTML(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
+}
+
+// ===== HASH-BASED CATEGORY FILTER =====
+function initHashCategoryFilter() {
+  function applyHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && VALID_CATEGORIES.includes(hash)) {
+      const tab = document.querySelector(`.menu-tab[data-category="${hash}"]`);
+      if (tab) {
+        document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentCategory = hash;
+        displayCount = 24;
+        renderMenuItems();
+        setTimeout(() => {
+          const menuSection = document.getElementById('menu');
+          if (menuSection) {
+            menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 500);
+      }
+    }
+  }
+  // Apply on initial load (after preloader)
+  setTimeout(applyHash, 1200);
+  // Apply when hash changes (e.g. clicking internal links)
+  window.addEventListener('hashchange', applyHash);
 }
