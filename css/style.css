@@ -3,6 +3,25 @@
    Premium Restaurant Theme with Animations
    ============================================ */
 
+/* ===== FONT FALLBACK METRICS (prevents CLS on font swap) ===== */
+@font-face {
+  font-family: 'Playfair Fallback';
+  src: local('Georgia');
+  size-adjust: 110%;
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
   /* Brand Colors */
@@ -25,8 +44,8 @@
   --color-call: #3498db;
 
   /* Typography */
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Playfair Display', 'Playfair Fallback', Georgia, serif;
+  --font-body: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-arabic: 'Amiri', serif;
 
   /* Spacing */
