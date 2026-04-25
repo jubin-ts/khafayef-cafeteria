@@ -324,12 +324,12 @@ function initPreloader() {
     window.scrollTo(0, 0);
     setTimeout(() => {
       document.getElementById('preloader').classList.add('loaded');
-    }, 800);
+    }, 200);
   });
   // Fallback in case load event already fired
   setTimeout(() => {
     document.getElementById('preloader').classList.add('loaded');
-  }, 3000);
+  }, 1500);
 }
 
 // ===== NAVIGATION =====
