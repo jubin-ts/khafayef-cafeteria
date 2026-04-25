@@ -309,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initAOS();
   initHashCategoryFilter();
+  initLazyMap();
 });
 
 // ===== PRELOADER =====
@@ -832,4 +833,36 @@ function initHashCategoryFilter() {
   setTimeout(applyHash, 1200);
   // Apply when hash changes (e.g. clicking internal links)
   window.addEventListener('hashchange', applyHash);
+}
+
+// ===== LAZY MAP LOADING =====
+function initLazyMap() {
+  const mapIframe = document.getElementById('contactMap');
+  const placeholder = document.getElementById('mapPlaceholder');
+  if (!mapIframe || !placeholder) return;
+
+  function loadMap() {
+    const src = mapIframe.getAttribute('data-src');
+    if (src && !mapIframe.src) {
+      mapIframe.src = src;
+      mapIframe.style.display = 'block';
+      placeholder.style.display = 'none';
+    }
+  }
+
+  // Load on click
+  placeholder.addEventListener('click', loadMap);
+
+  // Also load when section scrolls into view
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadMap();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '200px' });
+    observer.observe(mapIframe.parentElement);
+  }
 }
