@@ -3,4 +3,4 @@ Allow: /
 Disallow: /js/
 Disallow: /css/
 
-Sitemap: https://khafayef.ae/sitemap.xml
+Sitemap: https://khafayefcafeteria.ae/sitemap.xml
