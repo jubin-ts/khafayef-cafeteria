@@ -2624,3 +2624,17 @@ a, button, .menu-tab, .btn, .nav-link, .special-card, .order-platform-card, .faq
 h1, h2, h3, h4, .hero-title-brand, .logo-text {
   text-rendering: optimizeLegibility;
 }
+
+/* ===== 2026-11 layout fixes: keep hero content clear of the fixed header ===== */
+.hero{padding:120px 0 80px}
+.hero-stats .stat-number{display:inline}
+.hero-stats .stat-label{display:block}
+@media (max-width:600px){
+  .hero{padding:104px 0 64px}
+  .hero-stats{flex-direction:row;flex-wrap:nowrap;gap:18px;margin-top:8px}
+  .hero-stats .stat-number{font-size:1.8rem}
+  .hero-stats .stat-plus{font-size:1.4rem}
+  .hero-stats .stat-label{font-size:.68rem;letter-spacing:1px}
+  .hero-actions{margin-bottom:36px}
+}
+@media (max-width:600px){.hero-scroll{display:none}}
