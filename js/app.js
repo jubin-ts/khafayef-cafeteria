@@ -297,7 +297,6 @@ const VALID_CATEGORIES = ['grills', 'mandi', 'broasted', 'shawarma', 'chinese', 
 
 // ===== DOM READY =====
 document.addEventListener('DOMContentLoaded', () => {
-  initPreloader();
   initNavigation();
   initHeroParticles();
   initCounters();
@@ -311,26 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHashCategoryFilter();
   initLazyMap();
 });
-
-// ===== PRELOADER =====
-function initPreloader() {
-  // Ensure page starts at hero section on initial load
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-  window.scrollTo(0, 0);
-
-  window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-    setTimeout(() => {
-      document.getElementById('preloader').classList.add('loaded');
-    }, 200);
-  });
-  // Fallback in case load event already fired
-  setTimeout(() => {
-    document.getElementById('preloader').classList.add('loaded');
-  }, 1500);
-}
 
 // ===== NAVIGATION =====
 function initNavigation() {
@@ -399,7 +378,7 @@ function initHeroParticles() {
 
 // ===== COUNTER ANIMATION =====
 function initCounters() {
-  const counters = document.querySelectorAll('.stat-number');
+  const counters = document.querySelectorAll('.stat-number[data-count]');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -829,8 +808,8 @@ function initHashCategoryFilter() {
       }
     }
   }
-  // Apply on initial load (after preloader)
-  setTimeout(applyHash, 1200);
+  // Apply on initial load
+  setTimeout(applyHash, 300);
   // Apply when hash changes (e.g. clicking internal links)
   window.addEventListener('hashchange', applyHash);
 }
