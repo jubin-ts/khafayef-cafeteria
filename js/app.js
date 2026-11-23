@@ -713,12 +713,14 @@ function orderViaWhatsApp() {
   message += '_Please confirm the order and delivery details._';
 
   const encodedMsg = encodeURIComponent(message);
+  if (window.khTrackOrder) window.khTrackOrder();
   window.open(`https://wa.me/971507990910?text=${encodedMsg}`, '_blank');
 
   closeCart();
 }
 
 function orderViaCall() {
+  if (window.khTrackOrder) window.khTrackOrder();
   window.location.href = 'tel:+971507990910';
 }
 

@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (Google Ads 653-764-0309) -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NDFG5K37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // Google Ads conversion: Website order click (WhatsApp/Talabat/Noon/Call)
+    window.khTrackOrder = function () {
+      try { gtag('event', 'conversion', { send_to: 'AW-18399426133/KH96CJf4zb0dENXsw8VE', value: 1.0, currency: 'AED' }); } catch (e) {}
+    };
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (a && /wa\.me|api\.whatsapp\.com|whatsapp:|talabat\.com|food\.noon\.com|^tel:/i.test(a.getAttribute('href'))) window.khTrackOrder();
+    }, true);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khafayef Menu &amp; Prices | 242 Dishes | Al Yasmeen, Ajman | منيو خفايف</title>
   <meta name="description" content="Full Khafayef menu with prices: charcoal grills, mandi, shawarma, broasted, Chinese, Indian, burgers, juices &amp; kunafa. Open 24/7 in Al Yasmeen, Ajman. منيو خفايف الياسمين">

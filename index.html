@@ -2,6 +2,21 @@
 <html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (Google Ads 653-764-0309) -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NDFG5K37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // Google Ads conversion: Website order click (WhatsApp/Talabat/Noon/Call)
+    window.khTrackOrder = function () {
+      try { gtag('event', 'conversion', { send_to: 'AW-18399426133/KH96CJf4zb0dENXsw8VE', value: 1.0, currency: 'AED' }); } catch (e) {}
+    };
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (a && /wa\.me|api\.whatsapp\.com|whatsapp:|talabat\.com|food\.noon\.com|^tel:/i.test(a.getAttribute('href'))) window.khTrackOrder();
+    }, true);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khafayef Cafeteria &amp; Restaurant Al Yasmeen, Ajman | Open 24/7 | خفايف</title>
   <meta name="description" content="Khafayef Al Yasmeen, Ajman: charcoal grills, mandi, shawarma &amp; 200+ dishes, open 24/7. Order on Talabat, Noon or WhatsApp. خفايف الياسمين عجمان">
